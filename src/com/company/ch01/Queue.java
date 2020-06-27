@@ -34,6 +34,16 @@ public class Queue<Item> implements Iterable<Item> {
         N++;
     }
 
+    public Item dequeque() {
+        if (isEmpty()) {
+            return null;
+        }
+        Item item = first.item;
+        first = first.next;
+        N--;
+        return item;
+    }
+
     @Override
     public Iterator<Item> iterator() {
         return null;
